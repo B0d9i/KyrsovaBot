@@ -1,20 +1,16 @@
 package Najavnist.java.bot.service;
 
 import Najavnist.java.bot.Buttons.ReplyKeyboardMarkupOll;
-import Najavnist.java.bot.Buttons.ReplyKeyboardMarkupOll_Inline;
 import Najavnist.java.bot.DataBase.Person;
 import Najavnist.java.bot.DataBase.PersonDB;
 import Najavnist.java.bot.service.Logic.Console;
 import Najavnist.java.bot.service.Logic.Logic;
-import Najavnist.java.bot.service.Logic.LogicPara;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
@@ -68,17 +64,6 @@ private final Environment tocen;//бере дані з resources (не забу�
         } catch (TelegramApiException e) {
             throw new RuntimeException(e);
         }
-
-//        //пара
-//        System.out.println(update.getMessage().getText());
-//        LogicPara logicPara=new LogicPara();
-//        ReplyKeyboardMarkupOll_Inline replyKeyboardMarkupOll_inline=new ReplyKeyboardMarkupOll_Inline();
-//        logicPara.logica(update,replyKeyboardMarkupOll_inline);//клас де вся логіка.
-//        try {
-//            execute(logicPara.logica(update,replyKeyboardMarkupOll_inline));//ретурнить метод і відправляє повідомлення, яке сформоване в Logic
-//        } catch (TelegramApiException e) {
-//            throw new RuntimeException(e);
-//        }
 
     }
     public Environment getTocen() {
