@@ -1,4 +1,4 @@
-package Najavnist.java.bot.Buttons;
+package Najavnist.java.bot.service.Buttons;
 
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -12,9 +12,8 @@ public class ReplyKeyboardMarkupOll_Inline {
         InlineKeyboardMarkup inlineKeyboardMarkup=new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> keyboard=new ArrayList<>();
 
-        keyboard.add(Collections.singletonList(InlineKeyboardButton.builder().text("Служба порятунку ").callbackData("102").build()));
-        keyboard.add(Collections.singletonList(InlineKeyboardButton.builder().text("Поліція").callbackData("102").build()));
-        keyboard.add(Collections.singletonList(InlineKeyboardButton.builder().text("Швидка медична допомога").callbackData("103").build()));
+        keyboard.add(Collections.singletonList(InlineKeyboardButton.builder().text("Так").callbackData("yes").build()));//Радий, що сподобався
+        keyboard.add(Collections.singletonList(InlineKeyboardButton.builder().text("Ні").callbackData("no").build()));//Guten Tag
 
         inlineKeyboardMarkup.setKeyboard(keyboard);
         return inlineKeyboardMarkup;

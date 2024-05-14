@@ -1,6 +1,5 @@
-package Najavnist.java.bot.Buttons;
+package Najavnist.java.bot.service.Buttons;
 
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
@@ -19,6 +18,20 @@ public class ReplyKeyboardMarkupOll {
         List<KeyboardRow> keyboardRowsMenu = new ArrayList<>();
         KeyboardRow keyboardRowMenu = new KeyboardRow();
         keyboardRowMenu.add("Змінити прізвище");
+        keyboardRowMenu.add("Вказати наявність");
+        keyboardRowsMenu.add(keyboardRowMenu);
+
+        replyKeyboardMarkup.setKeyboard(keyboardRowsMenu);//створили кнопки меню
+        return replyKeyboardMarkup;
+    }
+    private ReplyKeyboardMarkup MenuKeyboardMenu2() {
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        replyKeyboardMarkup.setSelective(true);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        replyKeyboardMarkup.setOneTimeKeyboard(true);
+
+        List<KeyboardRow> keyboardRowsMenu = new ArrayList<>();
+        KeyboardRow keyboardRowMenu = new KeyboardRow();
         keyboardRowMenu.add("Вказати наявність");
         keyboardRowsMenu.add(keyboardRowMenu);
 
@@ -78,10 +91,26 @@ public class ReplyKeyboardMarkupOll {
         return replyKeyboardMarkup;
     }
 
+    private ReplyKeyboardMarkup MenuKeyboardNULL() {//пусті кнопки
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        replyKeyboardMarkup.setSelective(true);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        replyKeyboardMarkup.setOneTimeKeyboard(true);
 
-    public ReplyKeyboardMarkup getMenuKeyboardMenu() {
-        return MenuKeyboardMenu();
+        List<KeyboardRow> keyboardRowsPresence = new ArrayList<>();
+        KeyboardRow keyboardRowPresence1 = new KeyboardRow();
+        keyboardRowPresence1.add(" ");
+
+        keyboardRowsPresence.add(keyboardRowPresence1);
+        replyKeyboardMarkup.setKeyboard(keyboardRowsPresence);
+
+        return replyKeyboardMarkup;
+
     }
+
+    public ReplyKeyboardMarkup getMenuKeyboardNULL() {return MenuKeyboardNULL();}
+    public ReplyKeyboardMarkup getMenuKeyboardMenu() {return MenuKeyboardMenu();}
+    public ReplyKeyboardMarkup getMenuKeyboardMenu2() {return MenuKeyboardMenu2();}
     public ReplyKeyboardMarkup getMenuKeyboardPresence() {return MenuKeyboardPresence();}
     public ReplyKeyboardMarkup getMenuKeyboardPhone() {
         return MenuKeyboardPhone();
