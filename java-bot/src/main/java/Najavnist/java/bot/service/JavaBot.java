@@ -1,17 +1,27 @@
 package Najavnist.java.bot.service;
 
 import Najavnist.java.bot.Buttons.ReplyKeyboardMarkupOll;
+<<<<<<< HEAD
+import Najavnist.java.bot.DataBase.Person;
+import Najavnist.java.bot.DataBase.PersonDB;
+import Najavnist.java.bot.service.Logic.Console;
+import Najavnist.java.bot.service.Logic.Logic;
+=======
 
 import Najavnist.java.bot.service.Logic.Console;
 import org.joda.time.DateTime;
+>>>>>>> 6fb1ac10d7699c2fd015f296cf1f4cbcc45b3b67
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+<<<<<<< HEAD
+=======
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Contact;
 import org.telegram.telegrambots.meta.api.objects.Message;
+>>>>>>> 6fb1ac10d7699c2fd015f296cf1f4cbcc45b3b67
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
@@ -221,5 +231,12 @@ private final Environment tocen;//бере дані з resources (не забу�
         }
     }}
 
+<<<<<<< HEAD
+    }
+    public Environment getTocen() {
+        return tocen;
+    }
+=======
 
+>>>>>>> 6fb1ac10d7699c2fd015f296cf1f4cbcc45b3b67
 
